@@ -1,17 +1,13 @@
 <%= form_with(model: @user, local: true, multipart: true) do |form| %>
-
   <%= render partial: 'partials/form_errors', locals: {model: @user} %>
-
   <div calss="form-group">
     <%= form.label :name %>
     <%= form.text_field :name, class: 'form-control' %>
   </div>
-
   <div calss="form-group">
     <%= form.label :email %>
     <%= form.text_field :email, class: 'form-control' %>
   </div>
-
   <div class="actions">
     <%= form.submit 'Сохранить', class: 'btn btn-primary' %> или <%= link_to "Вернуться", :back %>
   </div>
