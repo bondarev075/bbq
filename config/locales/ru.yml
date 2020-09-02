@@ -14,3 +14,17 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+  controllers:
+    events:
+      created: 'Мероприятие успешно создано'
+      updated: 'Мероприятие успешно обновлено'
+      detroyed: 'Мероприятие удалено'
+    users:
+      updated: 'Профиль изменён'
+  app:
+    name: 'Шашлыки'
+    company: 'Хороший программист'
+  errors:
+    one: '%{count} ошибка'
+    few: '%{count} ошибки'
+    many: '%{count} ошибок'
