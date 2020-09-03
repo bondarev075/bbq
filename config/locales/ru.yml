@@ -5,7 +5,7 @@ ru:
       event: 'Событие'
     attributes:
       user:
-        email: 'Адрес электропочты'
+        email: 'Адрес почты'
         name: 'Имя'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
