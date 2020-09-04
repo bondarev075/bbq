@@ -17,8 +17,8 @@
             <div class="buffer-top">
               <%= link_to I18n.t('links.change'), edit_event_path(@event), class: 'btn btn-primary' %>
               <%= link_to I18n.t('links.delete'), event_path(@event),
-                      method: :delete, data: {confirm: I18n.t('questions.delete_event')},
-                      class: 'btn btn-danger ml-3' %>
+                    method: :delete, data: {confirm: I18n.t('questions.delete_event')},
+                    class: 'btn btn-danger ml-3' %>
             </div>
           <% end %>
         </div>
