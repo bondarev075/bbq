@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -8,12 +6,11 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 35 }
 
-  before_validation :set_name, on: :create
+  before_validation :check_name, on: :create
 
   private
 
-  def set_name
-    # self.name = "Пользователь #{rand(777)}" if self.name.blank?
+  def check_name
     self.name = self.email[/.+(?=@.+)/] if self.name.blank?
   end
 end

@@ -17,7 +17,7 @@
     <%= f.text_area :description, class: 'form-control' %>
   </div>
   <div class="actions buffer-top">
-    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
-    или <%= link_to 'вернуться', :back %>
+    <%= f.submit I18n.t('links.save'), class: 'btn btn-primary' %>
+    <%= link_to I18n.t('links.return'), :back %>
   </div>
 <% end %>

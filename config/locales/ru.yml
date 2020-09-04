@@ -25,6 +25,49 @@ ru:
     name: 'Шашлыки'
     company: 'Хороший программист'
   errors:
-    one: '%{count} ошибка'
-    few: '%{count} ошибки'
-    many: '%{count} ошибок'
+    one: 'В форме %{count} ошибка'
+    few: 'В форме %{count} ошибки'
+    many: 'В форме %{count} ошибок'
+  headers:
+    registration: 'Регистрация'
+    change_password: 'Изменить пароль'
+    new_event: 'Новое событие'
+    events: 'События'
+    change_event: 'Изменить событие'
+    change_profile: 'Изменить профиль'
+    sign_in: 'Вход'
+    sign_out: 'Выход'
+    delete_account: 'Удалить мою учетную запись'
+    subtitles:
+      user_events: 'Организовал события'
+  links:
+    change: 'Изменить'
+    delete: 'Удалить'
+    save: 'Сохранить'
+    create: 'Создать'
+    update: 'Обновить'
+    sign_in: 'Войти'
+    sign_in_with: 'Войти через'
+    sign_out: 'Выйти'
+    back: 'Назад'
+    return: 'Вернуться'
+    register: 'Зарегистрироваться'
+    profile: 'Профиль'
+    delete_account: 'Удалить мою учетную запись'
+    send_me_instructions: 'Отправьте мне инструкции по измнению пароля'
+    change_password: 'Сменить пароль'
+  questions:
+    delete_event: 'Удалить мероприятие?'
+    forgot_password: 'Забыли пароль?'
+    dont_get_unlock_instructions: 'Не получили инструкции о восстановлении пароля?'
+    are_you_sure: 'Вы уверены?'
+  tips:
+    password:
+      chars_minimum: 'минимум %{chars_count} символов'
+      leave_empty_to_save_current: 'оставьте пустым, если не хотите менять'
+      write_current_to_confirm_changes: 'укажите текущий пароль, чтобы подтвердить изменение'
+      confirm_new_password: 'Подтвердите новый пароль'
+    account:
+      unhappy: 'Не понравилось?'
+    events:
+      there_is_no_user_events: 'Пользователь не организовал ни одного события'
