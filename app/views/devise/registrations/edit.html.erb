@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-sm-3"></div>
   <div class="col-sm-6">
-    <h2><%= I18n.t 'headers.change_password' %></h2>
+    <h2><%= t('headers.change_password') %></h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
       <div class="form-group">
@@ -12,7 +12,7 @@
         <%= f.label :password %>
         <% if @minimum_password_length %>
           <small class="text-muted">
-            <em><%= I18n.t 'tips.password.chars_minimum', chars_count: @minimum_password_length %></em> <i>(<%= I18n.t 'tips.password.leave_empty_to_save_current' %>)</i><br />
+            <em><%= t('tips.password.chars_minimum'), chars_count: @minimum_password_length %></em> <i>(<%= I18n.t 'tips.password.leave_empty_to_save_current' %>)</i><br />
           </small>
         <% end %>
         <%= f.password_field :password, autocomplete: "new-password" %>
@@ -24,20 +24,20 @@
       <div class="form-group">
         <%= f.label :current_password %>
         <small class="text-muted">
-          <i>(<%= I18n.t 'tips.password.write_current_to_confirm_changes' %>)</i><br />
+          <i>(<%= t ('tips.password.write_current_to_confirm_changes') %>)</i><br />
         </small>
         <%= f.password_field :current_password, autocomplete: "current-password" %>
       </div>
       <div class="actions">
-        <%= f.submit I18n.t('links.update'), class: 'btn btn-success' %>
+        <%= f.submit t('links.update'), class: 'btn btn-success' %>
       </div>
     <% end %>
-    <h3><%= I18n.t 'headers.delete_account' %></h3>
-    <p><%= I18n.t('tips.account.unhappy') %> <%= button_to I18n.t('links.delete_account'),
-                        registration_path(resource_name), data: { confirm: I18n.t('questions.are_you_sure')},
+    <h3><%= t ('headers.delete_account') %></h3>
+    <p><%= t('tips.account.unhappy') %> <%= button_to t('links.delete_account'),
+                        registration_path(resource_name), data: { confirm: t('questions.are_you_sure')},
                         method: :delete, class: 'btn btn-danger' %></p>
     <div class="buffer-top">
-      <%= link_to I18n.t('links.return'), :back %>
+      <%= link_to t('links.return'), :back %>
     </div>
   </div>
 </div>
