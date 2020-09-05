@@ -14,6 +14,7 @@ ru:
         address: Место проведения
         datetime: Дата и время
         description: Описание
+
   controllers:
     events:
       created: Мероприятие успешно создано
@@ -25,13 +26,19 @@ ru:
       created: Ваш комментарий добавлен
       destroyed: Комментарий удалён
       error: Ошибка в комментарии
+    subscription:
+      created: Вы подписались на это событие
+      destroyed: Теперь вы не подписаны на это событие
+      error: Возникли проблемы при подписке на событие
+
   app:
     name: Шашлыки
     company: Хороший программист
-  errors:
-    one: "В форме %{count} ошибка"
-    few: "В форме %{count} ошибки"
-    many: "В форме %{count} ошибок"
+    errors:
+      one: "В форме %{count} ошибка"
+      few: "В форме %{count} ошибки"
+      many: "В форме %{count} ошибок"
+
   headers:
     registration: Регистрация
     change_password: Изменить пароль
@@ -44,6 +51,7 @@ ru:
     delete_account: Удалить мою учетную запись
     subtitles:
       user_events: Организовал события
+
   links:
     change: Изменить
     delete: Удалить
@@ -61,11 +69,13 @@ ru:
     delete_account: Удалить мою учетную запись
     send_me_instructions: Отправьте мне инструкции по измнению пароля
     change_password: Изменить мой пароль
+
   questions:
     delete_event: Удалить мероприятие?
     forgot_password: Забыли пароль?
     dont_get_unlock_instructions: Не получили инструкции о восстановлении пароля?
     are_you_sure: Вы уверены?
+
   tips:
     password:
       chars_minimum: "минимум %{chars_count} символов"
@@ -76,12 +86,18 @@ ru:
       unhappy: Не понравилось?
     events:
       there_is_no_user_events: Пользователь не организовал ни одного события
+
   mail:
     greeting: Добрый день!
     email_changed: Мы связались с вами, чтобы уведомить, что адрес вашей электронной почты был изменен на %{email}.
     password_changed: Мы связались с вами, чтобы сообщить, что ваш пароль был изменен.
     reset_password:
       html: "<p>Кто-то сделал запрос на изменение вашего пароля. Вы можете сделать это по ссылке ниже.</p><p>Если вы не делали этого запроса, просто пригнорируйте это письмо.</p><p>Ваш пароль не будет изменен, пока вы не перейдете по ссылке и не создадите новый.</p>"
+
   comments:
     comment:
       destroy_confirm: Удалить этот комментарий?
+
+  subscriptions:
+    subscription:
+      destroy_confirm: Удалить эту подписку?
