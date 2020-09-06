@@ -51,6 +51,9 @@ ru:
     delete_account: Удалить мою учетную запись
     subtitles:
       user_events: Организовал события
+      who_calls: Зовет
+      who_goes: Пойдут
+      i_will_go: Я пойду
 
   links:
     change: Изменить
@@ -69,6 +72,8 @@ ru:
     delete_account: Удалить мою учетную запись
     send_me_instructions: Отправьте мне инструкции по измнению пароля
     change_password: Изменить мой пароль
+    subscribe: Подписаться
+    send: Отправить
 
   questions:
     delete_event: Удалить мероприятие?

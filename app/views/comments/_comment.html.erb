@@ -5,10 +5,10 @@
       <% if comment.user.present? %>
         <%= render partial: 'users/user', object: comment.user %>
       <% else %>
-        <em><strong><%= comment.user_name %></strong></em>
+        <strong><%= comment.user_name %></strong>
       <% end %>
     </span>
-    <em><%= l(comment.created_at, format: :short) %></em>
+    <small><%= l(comment.created_at, format: :long) %></small>
     <% if current_user_can_edit?(comment) %>
       <%= link_to(
               fa_icon('trash'),
