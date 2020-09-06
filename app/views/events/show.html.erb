@@ -52,14 +52,16 @@
           </p>
         </div>
       </div>
-      <div class="event-subscription-form">
-        <h4><%= t('headers.subtitles.i_will_go') %>:</h4>
-        <div>
-          <%= render partial: 'subscriptions/form', locals: {
+      <% unless current_user_can_edit?(@event) %>
+        <div class="event-subscription-form">
+          <h4><%= t('headers.subtitles.i_will_go') %>:</h4>
+          <div>
+            <%= render partial: 'subscriptions/form', locals: {
             subscription: @new_subscription || @event.subscriptions.build
           } %>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
