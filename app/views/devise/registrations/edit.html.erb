@@ -12,7 +12,8 @@
         <%= f.label :password %>
         <% if @minimum_password_length %>
           <small class="text-muted">
-            <em><%= t('tips.password.chars_minimum'), chars_count: @minimum_password_length %></em> <i>(<%= I18n.t 'tips.password.leave_empty_to_save_current' %>)</i><br />
+            <em><%= t('tips.password.chars_minimum', chars_count: @minimum_password_length) %></em>
+            <span>(<%= t('tips.password.leave_empty_to_save_current') %>)</span><br />
           </small>
         <% end %>
         <%= f.password_field :password, autocomplete: "new-password" %>
@@ -34,7 +35,8 @@
     <% end %>
     <h3><%= t ('headers.delete_account') %></h3>
     <p><%= t('tips.account.unhappy') %> <%= button_to t('links.delete_account'),
-                        registration_path(resource_name), data: { confirm: t('questions.are_you_sure')},
+                        registration_path(resource_name),
+                        data: { confirm: t('questions.are_you_sure')},
                         method: :delete, class: 'btn btn-danger' %></p>
     <div class="buffer-top">
       <%= link_to t('links.return'), :back %>

@@ -16,7 +16,7 @@
         <%= f.label :password %>
         <% if @minimum_password_length %>
           <small class="text-muted">
-            <em>(<%= t('tips.password.chars_minimum'), chars_count: @minimum_password_length %>)</em>
+            <em>(<%= t('tips.password.chars_minimum', chars_count: @minimum_password_length) %>)</em>
           </small>
         <% end %>
         <%= f.password_field :password, class: 'form-control' %>
