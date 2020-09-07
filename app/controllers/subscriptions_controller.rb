@@ -10,6 +10,7 @@ class SubscriptionsController < ApplicationController
       @new_subscription.user = current_user
       if @new_subscription.save
         redirect_to @event, notice: I18n.t('controllers.subscription.created')
+        return
       end
     else
       message = I18n.t('controllers.subscription.event_author_cant_sign_on_his_event')
