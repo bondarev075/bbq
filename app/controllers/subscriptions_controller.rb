@@ -3,14 +3,20 @@ class SubscriptionsController < ApplicationController
   before_action :set_subscription, only: [:destroy]
 
   def create
-    @new_subscription = @event.subscriptions.build(subscription_params)
-    @new_subscription.user = current_user
+    message = I18n.t('controllers.subscription.error')
 
-    if @new_subscription.save
-      redirect_to @event, notice: I18n.t('controllers.subscription.created')
+    unless author_email?(subscription_params[:user_email])
+      @new_subscription = @event.subscriptions.build(subscription_params)
+      @new_subscription.user = current_user
+      if @new_subscription.save
+        redirect_to @event, notice: I18n.t('controllers.subscription.created')
+      end
     else
-      render 'events/show', alert: I18n.t('controllers.subscription.error')
+      message = I18n.t('controllers.subscription.event_author_cant_sign_on_his_event')
     end
+
+    flash.now[:error] = message
+    render 'events/show'
   end
 
   def destroy
@@ -37,5 +43,9 @@ class SubscriptionsController < ApplicationController
 
   def subscription_params
     params.fetch(:subscription, {}).permit(:user_email, :user_name)
+  end
+
+  def author_email?(email)
+    @event.user.email == email
   end
 end
