@@ -1,10 +1,13 @@
 module ApplicationHelper
   def user_avatar(user)
-    #TODO: user real avatar
-    asset_path('user.png')
+    if user.avatar?
+      user.avatar.url
+    else
+      asset_path('user.png')
+    end
   end
 
   def fa_icon(icon_class)
-  content_tag 'i', '', class: "text-red fa fa-#{icon_class}"
+    content_tag 'span', '', class: "text-red fa fa-#{icon_class}"
   end
 end
