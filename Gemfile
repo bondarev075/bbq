@@ -16,6 +16,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
 
+gem 'carrierwave'
+gem 'rmagick'
+
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
   gem 'pry'
