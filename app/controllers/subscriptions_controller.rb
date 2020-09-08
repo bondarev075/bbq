@@ -1,23 +1,16 @@
 class SubscriptionsController < ApplicationController
-  before_action :set_event, only: [:create, :destroy]
+  before_action :set_event, only: %i[create destroy]
   before_action :set_subscription, only: [:destroy]
 
   def create
-    message = I18n.t('controllers.subscription.error')
+    @new_subscription = @event.subscriptions.build(subscription_params)
+    @new_subscription.user = current_user
 
-    unless author_email?(subscription_params[:user_email])
-      @new_subscription = @event.subscriptions.build(subscription_params)
-      @new_subscription.user = current_user
-      if @new_subscription.save
-        redirect_to @event, notice: I18n.t('controllers.subscription.created')
-        return
-      end
+    if @new_subscription.save
+      redirect_to @event, notice: I18n.t('controllers.subscription.created')
     else
-      message = I18n.t('controllers.subscription.event_author_cant_sign_on_his_event')
+      render 'events/show', alert: I18n.t('controllers.subscription.error')
     end
-
-    flash.now[:error] = message
-    render 'events/show'
   end
 
   def destroy

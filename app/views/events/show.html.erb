@@ -41,7 +41,7 @@
         <h4><%= t('headers.subtitles.who_calls') %>:</h4>
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
-      <% if event_has_subscribers(@event) %>
+      <% if event_has_subscriptions? %>
         <div class="event-subscriptions">
           <h4><%= t('headers.subtitles.who_goes') %>:</h4>
           <div>

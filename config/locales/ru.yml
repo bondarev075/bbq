@@ -15,6 +15,8 @@ ru:
         address: Место проведения
         datetime: Дата и время
         description: Описание
+      subscription:
+        user_email: Адрес почты
 
   controllers:
     events:
@@ -31,7 +33,7 @@ ru:
       created: Вы подписались на это событие
       destroyed: Теперь вы не подписаны на это событие
       error: Возникли проблемы при подписке на событие
-      event_author_cant_sign_on_his_event: Автор не может подписываться на свое событие
+      event_author_subscription_denied: Автор не может быть подписан на свое событие
 
   app:
     name: Шашлыки
