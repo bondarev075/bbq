@@ -10,7 +10,7 @@
             <h1><%= @event.title %></h1>
             <h3><%= l @event.datetime, format: :long %></h3>
             <h3><small><%= link_to @event.address,
-              "https://yandex.ru/maps/?text=#{@event.address}", target: :blank %></small></h3>
+              "https://yandex.ru/maps/?text=#{@event.address}", target: '_blank' %></small></h3>
             <p><%= @event.description %></p>
           </div>
           <% if current_user_can_edit?(@event) %>
@@ -41,7 +41,7 @@
         <h4><%= t('headers.subtitles.who_calls') %>:</h4>
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
-      <% if event_has_subscriptions? %>
+      <% if @event.subscriptions.count.positive? %>
         <div class="event-subscriptions">
           <h4><%= t('headers.subtitles.who_goes') %>:</h4>
           <div>

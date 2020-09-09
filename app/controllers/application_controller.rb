@@ -15,8 +15,4 @@ class ApplicationController < ActionController::Base
     user_signed_in? &&
       (model.user == current_user || (model.try(:event).present? && model.event.user == current_user))
   end
-
-  def event_has_subscriptions?
-    Subscription.find_by(event_id: @event.id).present?
-  end
 end

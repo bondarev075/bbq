@@ -33,7 +33,6 @@ ru:
       created: Вы подписались на это событие
       destroyed: Теперь вы не подписаны на это событие
       error: Возникли проблемы при подписке на событие
-      event_author_subscription_denied: Автор не может быть подписан на свое событие
 
   app:
     name: Шашлыки
@@ -110,3 +109,4 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: Удалить эту подписку?
+      self_event_subscription: Данный адрес почты не может быть подписан на это событие

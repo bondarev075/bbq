@@ -17,8 +17,7 @@ class EventsController < ApplicationController
     @event = current_user.events.build
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @event = current_user.events.build(event_params)
@@ -41,8 +40,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
 
-    redirect_to events_url,
-            notice: I18n.t('controllers.events.detroyed')
+    redirect_to events_url, notice: I18n.t('controllers.events.detroyed')
   end
 
   private
