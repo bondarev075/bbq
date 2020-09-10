@@ -3,6 +3,8 @@ ru:
     models:
       user: Пользователь
       event: Событие
+      photo: Фотография
+      subscription: Подписка
     attributes:
       user:
         email: Адрес почты
@@ -17,6 +19,12 @@ ru:
         description: Описание
       subscription:
         user_email: Адрес почты
+        user_name: Имя
+      comment:
+        user_name: Имя
+        body: Комментарий
+      photo:
+        photo: Фотография
 
   controllers:
     events:
@@ -29,10 +37,14 @@ ru:
       created: Ваш комментарий добавлен
       destroyed: Комментарий удалён
       error: Ошибка в комментарии
-    subscription:
+    subscriptions:
       created: Вы подписались на это событие
       destroyed: Теперь вы не подписаны на это событие
       error: Возникли проблемы при подписке на событие
+    photos:
+      created: Фотография добавлена
+      destroyed: Фотография удалена
+      error: Возникли проблемы при добавлении фотографии
 
   app:
     name: Шашлыки
@@ -77,6 +89,7 @@ ru:
     change_password: Изменить мой пароль
     subscribe: Подписаться
     send: Отправить
+    load: Загрузить
 
   questions:
     delete_event: Удалить мероприятие?
