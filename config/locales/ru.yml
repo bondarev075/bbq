@@ -25,6 +25,12 @@ ru:
         body: Комментарий
       photo:
         photo: Фотография
+    errors:
+      models:
+        subscription:
+          attributes:
+            base:
+              self_event_subscription: Автор не может подписываться на свое событие
 
   controllers:
     events:
@@ -122,4 +128,4 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: Удалить эту подписку?
-      self_event_subscription: Данный адрес почты не может быть подписан на это событие
+
