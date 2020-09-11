@@ -31,6 +31,8 @@ ru:
           attributes:
             base:
               self_event_subscription: Автор не может подписываться на свое событие
+            user_email:
+              existing_user_event_subscription: Пользователь с таким адресом почты уже зарегистрирован на сайте. Для подписки ему нужно зайти на сайт под своим паролем.
 
   controllers:
     events:
