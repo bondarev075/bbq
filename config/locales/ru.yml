@@ -110,18 +110,17 @@ ru:
       chars_minimum: "минимум %{chars_count} символов"
       leave_empty_to_save_current: оставьте пустым, если не хотите менять
       write_current_to_confirm_changes: укажите текущий пароль, чтобы подтвердить изменение
+      new_password: Новый пароль
       confirm_new_password: Подтвердите новый пароль
     account:
       unhappy: Не понравилось?
     events:
-      there_is_no_user_events: Пользователь не организовал ни одного события
+      there_is_no_user_events: Вы пока не организовали ни одного события
 
   mail:
     greeting: Добрый день!
     email_changed: Мы связались с вами, чтобы уведомить, что адрес вашей электронной почты был изменен на %{email}.
     password_changed: Мы связались с вами, чтобы сообщить, что ваш пароль был изменен.
-    reset_password:
-      html: "<p>Кто-то сделал запрос на изменение вашего пароля. Вы можете сделать это по ссылке ниже.</p><p>Если вы не делали этого запроса, просто пригнорируйте это письмо.</p><p>Ваш пароль не будет изменен, пока вы не перейдете по ссылке и не создадите новый.</p>"
 
   comments:
     comment:
@@ -131,3 +130,18 @@ ru:
     subscription:
       destroy_confirm: Удалить эту подписку?
 
+  event_mailer:
+    comment:
+      title: Новый комментарий
+      author: Автор
+      event: Событие
+      datetime: Состоится
+      owner: Организатор
+    subscription:
+      title: Новая подписка
+      name: Имя
+      email: Email
+      author: Автор
+      event: Событие
+      datetime: Состоится
+      owner: Организатор

@@ -1,0 +1,12 @@
+<h1><%= t '.title' %></h1>
+
+<p><%= t '.name' %>: <strong><%= @name %></strong></p>
+<p><%= t '.email' %>: <strong><%= link_to @email, "mailto:#{@email}" %></strong></p>
+
+<hr>
+
+<h3><%= t '.event' %>: <%= @event.title %></h3>
+
+<h4><%= t '.datetime' %>: <%= l @event.datetime %></h4>
+
+<h4><%= t '.owner' %>: <%= @event.user.name %></h4>
