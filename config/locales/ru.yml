@@ -17,6 +17,7 @@ ru:
         address: Место проведения
         datetime: Дата и время
         description: Описание
+        picode: Пинкод доступа
       subscription:
         user_email: Адрес почты
         user_name: Имя
@@ -39,6 +40,7 @@ ru:
       created: Мероприятие успешно создано
       updated: Мероприятие успешно обновлено
       detroyed: Мероприятие удалено
+      wrong_pincode: Неверный пинкод!
     users:
       updated: Профиль изменён
     comments:
