@@ -15,6 +15,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
+gem 'lightbox2-rails'
 
 gem 'carrierwave'
 gem 'rmagick'
