@@ -17,5 +17,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 #The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline
 Rails.application.config.assets.unknown_asset_fallback = true
 
-Rails.application.config.assets.precompile += %w( lightbox/* )
+# Rails.application.config.assets.precompile += %w( lightbox/* )
 

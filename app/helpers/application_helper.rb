@@ -3,7 +3,7 @@ module ApplicationHelper
     if user.avatar?
       user.avatar.url
     else
-      asset_path('user.png')
+      asset_pack_path('media/images/user.png')
     end
   end
 
@@ -11,7 +11,7 @@ module ApplicationHelper
     if user.avatar.file.present?
       user.avatar.thumb.url
     else
-      asset_path('user.png')
+      asset_pack_path('media/images/user.png')
     end
   end
 

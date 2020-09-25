@@ -36,5 +36,8 @@ module Bbq
     config.i18n.locale = :ru
 
     config.i18n.fallbacks = [:en]
+
+    # Enable the asset pipeline
+    config.assets.enabled = false
   end
 end

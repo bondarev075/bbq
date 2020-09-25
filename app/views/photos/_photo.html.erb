@@ -1,4 +1,4 @@
-<div class="event-photo buffer-both">
+<span class="event-photo buffer-both buffer-left">
   <% image_title = "Добавил #{render partial: 'users/user', object: photo.user}" %>
   <%= link_to image_tag(photo.photo.thumb.url),
               photo.photo.url,
@@ -7,4 +7,4 @@
                   title: image_title
               }
   %>
-</div>
+</span>

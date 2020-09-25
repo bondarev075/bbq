@@ -9,13 +9,12 @@ gem 'devise-i18n'
 gem 'rails-i18n'
 
 gem 'puma', '~> 4.1'
-gem 'webpacker', '~> 4.0'
-gem 'jbuilder', '~> 2.7'
+gem 'webpacker', '~> 5.x'
 gem 'bootsnap', '>= 1.4.2', require: false
 
-gem 'twitter-bootstrap-rails'
-gem 'jquery-rails'
-gem 'lightbox2-rails'
+# gem 'jbuilder', '~> 2.7'
+# gem 'twitter-bootstrap-rails'
+# gem 'lightbox2-rails'
 
 gem 'carrierwave'
 gem 'rmagick'
@@ -23,7 +22,7 @@ gem 'fog-aws'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
-  gem 'pry'
+  gem 'pry-rails'
 end
 
 group :development do
