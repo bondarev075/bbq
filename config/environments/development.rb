@@ -60,12 +60,13 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.smtp_settings = {
+  ActionMailer::Base.smtp_settings = {
     address: 'smtp.gmail.com',
-    port: 587,
-    domain: 'gmail.com',
+    port: '587',
+    authentication: :plain,
     user_name: ENV['EMAIL'],
     password: ENV['EMAIL_PASSWORD'],
-    authentication: 'plain'
+    domain: 'gmail.com',
+    enable_starttls_auto: true
   }
 end
