@@ -12,10 +12,6 @@ gem 'puma', '~> 4.1'
 gem 'webpacker', '~> 5.x'
 gem 'bootsnap', '>= 1.4.2', require: false
 
-# gem 'jbuilder', '~> 2.7'
-# gem 'twitter-bootstrap-rails'
-# gem 'lightbox2-rails'
-
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'

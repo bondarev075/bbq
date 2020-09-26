@@ -63,7 +63,12 @@ class EventsController < ApplicationController
   end
 
   def set_event
-    @event = Event.find(params[:id])
+    @event = Event.find_by(id: params[:id])
+    unless @event
+      flash[:error] = "Такого события не существует"
+      redirect_to events_url
+    end
+
   end
 
   def set_current_user_event
