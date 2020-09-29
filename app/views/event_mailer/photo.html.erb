@@ -1,0 +1,13 @@
+<h1><%= t '.title' %></h1>
+
+<p><%= t '.author' %>: <strong><%= @photo.user.name %></strong></p>
+
+<hr>
+
+<h3><%= t '.event' %>: <%= @event.title %></h3>
+
+<h4><%= t '.datetime' %>: <%= l @event.datetime, format: :date_time %></h4>
+
+<h4><%= t '.owner' %>: <%= @event.user.name %></h4>
+
+<%= image_tag attachments[@photo.photo.file.filename].url, alt: "Фотография" %>

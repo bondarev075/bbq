@@ -137,7 +137,7 @@ ru:
       title: Новый комментарий
       author: Автор
       event: Событие
-      datetime: Состоится
+      datetime: Дата события
       owner: Организатор
     subscription:
       title: Новая подписка
@@ -145,5 +145,14 @@ ru:
       email: Email
       author: Автор
       event: Событие
-      datetime: Состоится
+      datetime: Дата события
       owner: Организатор
+    photo:
+      title: Новая фотография
+      author: Автор
+      event: Событие
+      datetime: Дата события
+      owner: Организатор
+  time:
+    formats:
+      date_time: '%d.%m.%Y %H:%M'

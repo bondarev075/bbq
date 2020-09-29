@@ -1,0 +1,8 @@
+<%= t '.title' %>
+-----------------
+Пользователь <%= @photo.user.name %> добавил фотографию в событие.
+
+__________________________
+<%= t '.event' %>: <%= @event.title %>
+<%= t '.datetime' %>: <%= l @event.datetime %>
+<%= t '.owner' %>: <%= @event.user.name %>
