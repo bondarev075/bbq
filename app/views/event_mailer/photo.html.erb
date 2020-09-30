@@ -10,4 +10,4 @@
 
 <h4><%= t '.owner' %>: <%= @event.user.name %></h4>
 
-<%= image_tag attachments[@photo.photo.file.filename].url, alt: "Фотография" %>
+<%= image_tag("#{@photo.photo}")%>

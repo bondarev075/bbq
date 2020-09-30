@@ -19,6 +19,7 @@ gem 'fog-aws'
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
   gem 'pry-rails'
+  gem "letter_opener"
 end
 
 group :development do

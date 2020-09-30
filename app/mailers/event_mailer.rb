@@ -19,9 +19,6 @@ class EventMailer < ApplicationMailer
     @photo = photo
     @event = event
 
-    path = photo.photo.thumb.url
-    path = "#{Rails.root}/public#{path}" unless Rails.env.production?
-    attachments.inline[photo.photo.file.filename] = File.read(path)
     mail to: email, subject: "Новая фотография в событии @ #{event.title}"
   end
 end
