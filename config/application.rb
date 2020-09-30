@@ -12,7 +12,6 @@ require "action_mailbox/engine"
 require "action_text/engine"
 require "action_view/railtie"
 require "action_cable/engine"
-require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -36,8 +35,5 @@ module Bbq
     config.i18n.locale = :ru
 
     config.i18n.fallbacks = [:en]
-
-    # Enable the asset pipeline
-    config.assets.enabled = false
   end
 end
