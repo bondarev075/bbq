@@ -17,6 +17,7 @@ gem 'rmagick'
 gem 'fog-aws'
 
 group :development, :test do
+  gem 'dotenv-rails', require: 'dotenv/rails-now'
   gem 'sqlite3', '~> 1.4'
   gem 'pry-rails'
   gem "letter_opener"
