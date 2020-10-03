@@ -1,5 +1,9 @@
 <span class="event-photo buffer-both buffer-left">
-  <% image_title = "Добавил #{render partial: 'users/user', object: photo.user}" %>
+  <% image_title = "#{t('photos.photo.loaded')} #{render partial: 'users/user', object: photo.user}" %>
+  <% if current_user_can_edit?(photo) %>
+    <% image_title += link_to fa_icon("trash"), event_photo_path(photo.event, photo),
+                              method: :delete, data: {confirm: t('questions.delete_photo')}, class: "buffer-left photo-delete" %>
+  <% end %>
   <%= link_to image_tag(photo.photo.thumb.url),
               photo.photo.url,
               data: {

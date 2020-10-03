@@ -1,7 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./events";
 @import "./users";
-@import "./lightbox";
+@import "./lightbox.min";
 
 /* Buffers */
 .buffer-top {
@@ -46,4 +46,8 @@
 
 .thumbnail-inner {
   padding: 20px 4px 4px;
+}
+
+a.photo-delete {
+  color: red !important;
 }

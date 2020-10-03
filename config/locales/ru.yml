@@ -103,6 +103,7 @@ ru:
 
   questions:
     delete_event: Удалить мероприятие?
+    delete_photo: Удалить фотографию?
     forgot_password: Забыли пароль?
     dont_get_unlock_instructions: Не получили инструкции о восстановлении пароля?
     are_you_sure: Вы уверены?
@@ -132,6 +133,11 @@ ru:
     subscription:
       destroy_confirm: Удалить эту подписку?
 
+  photos:
+    photo:
+      loaded: Добавлена
+      delete: Удалить
+
   event_mailer:
     comment:
       title: Новый комментарий
@@ -153,6 +159,7 @@ ru:
       event: Событие
       datetime: Дата события
       owner: Организатор
+
   time:
     formats:
       date_time: '%d.%m.%Y %H:%M'

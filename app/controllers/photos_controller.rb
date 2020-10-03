@@ -33,7 +33,7 @@ class PhotosController < ApplicationController
   end
 
   def set_photo
-    @photo = event.photos.find(params[:id])
+    @photo = @event.photos.find(params[:id])
   end
 
   def photo_params
