@@ -6,7 +6,7 @@
       <%= render "devise/shared/error_messages", resource: resource %>
       <div class="form-group">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <%= f.email_field :email, class: 'form-control', autofocus: true, autocomplete: "email" %>
       </div>
       <div class="actions buffer-top">
         <%= f.submit t('links.send_me_instructions'), class: 'btn btn-primary' %>
