@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+
 gem 'devise'
 gem 'devise-i18n'
 gem 'rails-i18n'
@@ -17,7 +19,6 @@ gem 'rmagick'
 gem 'fog-aws'
 
 group :development, :test do
-  gem 'dotenv-rails', require: 'dotenv/rails-now'
   gem 'sqlite3', '~> 1.4'
   gem 'pry-rails'
   gem "letter_opener"
