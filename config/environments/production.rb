@@ -104,17 +104,9 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-  config.action_mailer.default_url_options = { host: 'meet-meat.ru' }
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_deliveries = true
-
-  ActionMailer::Base.smtp_settings = {
-    address: 'meet-meat.ru',
-    port: '25',
-    authentication: :plain,
-    user_name: ENV['EMAIL'],
-    password: ENV['EMAIL_PASSWORD'],
-    domain: 'meet-meat.ru',
-    enable_starttls_auto: true
-  }
+  config.action_mailer.default_url_options = { host: 'meet-meat.ru' }
+  config.action_mailer.default_options = {from: 'Admin <admin@meet-meat.ru>'}
+  config.action_mailer.delivery_method = :sendmail
 end
