@@ -40,3 +40,6 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/syst
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.6.3'
+
+Rake::Task["deploy:assets:precompile"].clear_actions
+after'bundler:install','my_assets:webpack_assets_compile'
